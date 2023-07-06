@@ -1,0 +1,135 @@
+.datePickerWrapper {
+  flex-direction: column;
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid rgba(22, 73, 116, 0.24);
+  height: 400px;
+  justify-content: space-around;
+}
+.today {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  color: #0074fc;
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.captionEnd {
+  .nav {
+    right: 0;
+    left: auto;
+  }
+}
+
+.day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 100%;
+  &:hover {
+    border-radius: 8px;
+  }
+}
+
+.rangeStart,
+.rangeEnd {
+  border-radius: 8px 0px 0px 8px;
+  background: var(--background-accent, #0074fc);
+  color: #fff;
+
+  &:hover {
+    background: var(--background-accent, #0074fc);
+  }
+}
+.rangeEnd {
+  border-radius: 0px 8px 8px 0px;
+}
+.rangeMiddle {
+  background: var(--states-hover, rgba(22, 73, 116, 0.06));
+  color: #000;
+  border-radius: 0px;
+  &:hover {
+    background: var(--background-accent, #0074fc);
+  }
+}
+
+.times {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  border-top: 1px solid rgba(22, 73, 116, 0.24);
+  padding: 8px 16px;
+}
+.caption {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    content: '';
+    height: 0.01rem;
+    width: calc(100% + 28px);
+    display: block;
+    background: rgba(22, 73, 116, 0.24);
+    transform: translateX(-14px);
+  }
+}
+
+.captionLabel {
+  z-index: 1;
+  margin: 0;
+  padding: 0 0.25em;
+  white-space: nowrap;
+  color: currentColor;
+  border: 0;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: var(--rdp-caption-font-size);
+  font-weight: bold;
+}
+.label {
+  display: flex;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: 333;
+
+  > :last-child {
+    color: #aabccd;
+    margin-left: 3px;
+  }
+}
+.iconRight {
+  transform: rotate(180deg);
+}
+.headCell {
+  vertical-align: middle;
+  font-size: 0.75em;
+  font-weight: 500;
+  text-align: center;
+  height: 40px;
+  padding: 0;
+  text-transform: uppercase;
+  color: var(--icon-secondary, #aabccd);
+  text-align: center;
+}
